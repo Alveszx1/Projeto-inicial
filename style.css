@@ -35,9 +35,10 @@ body *{
   color: var(--text-color); /* cor do texto */
 }
 #container{
-  width: 360px; /*largura */
+  width: 100%; /*largura */
   margin: 56px auto 0px; /* 56 em cima , auto nas laterias , e em baixo n importa*/ 
   padding: 0 12px; 
+  max-width: 588px;
 }
 #profile img{
   width: 112px; /*largura */
