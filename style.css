@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} /* tirou o margin e pading original do navegador */
+:root{
+  --text-color: white; /*cor do texto*/
+  --bg-url: url(./assets/bg-mobile.jpg); /*imagem preta*/
+  --stroke-color: rgba(255, 255, 255, 0.5);  /* cor da borda*/
+  --surface-color:  rgba(255, 255, 255, 0.05); /* cor de dentro*/
+  --surface-color-hover: rgba(0,0,0, 0.02);/* quando passar o botão por cima */
+  --highlight-color: rgba(255,255,255, 0.2); /* cor quando passar por cima do social media */
+  --botão-bg-url: url(./assets/moon-star.svg);
+}
+.light {
+    --text-color: black; /*cor do texto*/
+    --bg-url: url(./assets/bg-mobile-light.jpg); /*imagem branca*/
+    --stroke-color: rgba(0, 0, 0, 0.5); /* cor da borda*/
+    --surface-color:rgba(255, 255, 255, 0.1); /* cor de dentro*/
+    --surface-color-hover: rgba(0,0,0, 0.02); /* quando passar o botão por cima */
+    --highlight-color: rgb(0,0,0, 0.1); /* cor quando passar por cima do social media */
+    /*segue assim para o de cima tambem */
+    --botão-bg-url: url(./assets/sun.svg);
+
+}
+  
+body{
+  background: var(--bg-url); /* link da imagem de fundo */
+  background-repeat: no-repeat; /* não repetir a imagem */
+  background-position: top center ; /* colocar ela no centro*/
+  background-size: cover; /* prencher todo o espaço branco*/
+}
+body *{
+  family: "Inter", sans-serif; /* fonte do texto */
+  color: var(--text-color); /* cor do texto */
+}
+#container{
+  width: 360px; /*largura */
+  margin: 56px auto 0px; /* 56 em cima , auto nas laterias , e em baixo n importa*/ 
+  padding: 0 12px; 
+}
+#profile img{
+  width: 112px; /*largura */
+
+}
+#profile{
+  text-align: center; /*centralizou a imagem*/
+  padding: 12px /*espaço dentro da caixa */
+}
+#profile p{
+  line-height: 24px;/* altura da linha */
+  font-weight: 400; /*NEGRITO DA LINHA */
+  margin-top: 8px; /* top = cima */
+}
+
+#switch{
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+#switch button{
+  width: 32px;
+  height:32px;
+  background: white var(--botão-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%; /*usei pra centralizar*/
+  left: 0%;/*usei pra centralizar*/
+  z-index: 1; 
+  transform: translateY(-50%);/*usei pra centralizar*/
+}
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+  
+}
+  
+  
+
+/*links*/
+ul{
+  list-style: none; /* remove os pontinhos*/
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /*espaço entre linhas*/
+  padding: 24px 0;
+ 
+}
+ul li a{
+  display: flex;
+  align-items: center; /* eixo x */
+  justify-content: center; /* eixo y */
+  padding: 16px 24px;
+  gap: 8px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px) ;
+  text-decoration: none;
+
+  transition: background 0.2s;      
+}
+ul li a:hover{
+background: var(--surface-color-hover);
+border: 1.5px solid var(--text-color);
+
+}
+#socialmidia{
+  display: flex;
+  gap: 32px;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+#socialmidia a{
+  display: flex;
+  justify-content: center;
+  align-items: center; /*usamos para centralizar o icone no hover*/
+  padding: 16px; /* deixou uma caixinha*/
+  transition: background 0.5s;
+  border-radius: 50%;
+
+
+}
+
+#socialmidia a:hover{
+    background: var(--highlight-color); /*juntamente ao pedding de 16px podemos dizer que é o tamanho da caixa */
+}
+footer { /* serve como rodapé */
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+
+}
