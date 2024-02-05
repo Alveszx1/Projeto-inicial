@@ -29,6 +29,7 @@ body{
   background-repeat: no-repeat; /* não repetir a imagem */
   background-position: top center ; /* colocar ela no centro*/
   background-size: cover; /* prencher todo o espaço branco*/
+  height: 100vh; /*faz com que prencha 100% do espaço em branco */
 }
 body *{
   family: "Inter", sans-serif; /* fonte do texto */
@@ -145,4 +146,12 @@ footer { /* serve como rodapé */
   text-align: center;
   font-size: 14px;
 
+}
+@media (min-width: 700px){
+  :root {
+    --bg-url:url(.assets/bg-desktop.jpg)
+  }
+  .light{
+     --bg-url:url(.assets/bg-desktop-light.jpg)
+  }
 }
